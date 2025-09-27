@@ -3,6 +3,102 @@
     <head> 
         <title>Emily Rewritten | Stories</title>
         <link rel="stylesheet" href="css/mystyle.css">
+        <!--Internal CSS-->
+        <style>
+        /* Story Gallery */
+.story-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* flexible grid */
+  gap: 15px; /* space between images */
+  margin: 30px 0;
+  justify-items: center;
+}
+
+.story-gallery img {
+  width: 100%;
+  max-width: 250px; /* keeps images from getting too large */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.story-gallery img:hover {
+  transform: scale(1.05);
+}
+/* Golden bordered special paragraphs */
+.gold-paragraph {
+  border: 2px solid #d4af37; /* gold border */
+  padding: 15px 20px;
+  margin: 20px auto; /* centers horizontally */
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 700px; /* keeps them neat, not stretched */
+  text-align: center; /* centers text */
+}
+/* Story Form Section */
+.story-form {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fffaf0; /* soft ivory background */
+  border: 2px solid #d4af37; /* gold border */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.story-form h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.story-form .form-intro {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Inputs and Textarea */
+.story-form input,
+.story-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-form input:focus,
+.story-form textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212,175,55,0.4);
+  outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+  background: #d4af37;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: #b8952d;
+  transform: translateY(-2px);
+}
+
+
+</style>
+
     </head>
         <body>
             <!--Navigation Bar-->
@@ -23,34 +119,83 @@
             <p class="quote" style="text-align: center;">"Called to strive for righteousness.</p>
             </header>
             
-            <p>Emily is a symbolic figure representing every young woman who has faced trauma but found strength 
-              to rewrite her story. The name comes from the founder’s first published book “Emily rewritten”, which
-               sparked the movement. -It’s about resilience, healing, and authorship</p>
-            <p class="quote">“This is where I rewrote my life.”</p>
+          <section class="intro">
+    <p class="gold-paragraph">
+      <strong>Emily</strong> is a symbolic figure representing every young woman who has faced trauma but found the
+      strength to rewrite her story. The name comes from the founder’s first published book,
+      <em>Emily Rewritten</em>, which sparked this movement.  
+    </p>
+    <p class="gold-paragraph">
+      This journey is about <strong>resilience, healing, and authorship</strong>—reminding us that no matter what we’ve
+      been through, we can take back the pen and write a new ending.
+    </p>
+    <p class="quote">“This is where I rewrote my life.”</p>
+  </section>
 
-            <img src="C:\Users\IT\Downloads\Emilyrewritten\images\storycard1.jpg" width="200" >
-            <img src="C:\Users\IT\Downloads\Emilyrewritten\images\storycard2.jpg" width="200" >
-            <img src="C:\Users\IT\Downloads\Emilyrewritten\images\storycard3.jpg" width="200" >
-            <img src="C:\Users\IT\Downloads\Emilyrewritten\images\storycard4.jpg" width="200" >
-            <h3><b>Submit Your Story</b></h3>
-<hr>
-            <p>We believe in the power of storytelling to heal and transform lives. If you have a story of resilience,
-               hope, or transformation that you would like to share, we would love to hear from you. Your story can
-                inspire others and contribute to our mission of empowering youth to reclaim their narratives.</p>
-            <p>Please ensure that your story is original and that you have the right to share it. We respect your 
-              privacy and will handle your submission with care.</p>
-            <form>
-                <label for="name">Your Name</label><br>
-                <input type="text" id="name" name="name" required><br>
+  <!-- Story Gallery -->
+<section class="story-gallery">
+  <img src="images/storycard1.jpg" alt="Story 1">
+  <img src="images/storycard2.jpg" alt="Story 2">
+  <img src="images/storycard3.jpg" alt="Story 3">
+  <img src="images/storycard4.jpg" alt="Story 4">
+</section>
 
-                <label for="email">Your Email</label><br>
-                <input type="email" id="email" name="email" required><br>
+  <!-- Submit Your Story -->
+  <section class="submit-story">
+    <h3 class="animated-title"><b>Submit Your Story</b></h3>
+    <style>
+    .animated-title {
+      text-align: center;
+      animation: move-center 2s ease-in-out;
+    }
 
-                <label for="story">Your Story</label><br>
-                <textarea id="story" name="story" rows="10" required></textarea><br>
+    @keyframes move-center {
+      0% { transform: translateX(-100px); opacity: 0; }
+      60% { transform: translateX(20px); opacity: 1; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    </style>
+    <p class="gold-paragraph">
+      We believe in the power of storytelling to heal and transform lives. If you have a story of
+      <strong>resilience, hope, or transformation</strong> that you would like to share, we would love to hear from you.
+      Your story can inspire others and contribute to our mission of empowering youth to reclaim their narratives.
+      <br>
+      <a href="stories.html" class="read-more-link">Read more stories</a>
+    </p>
+</p>
 
-                <button type="submit">Submit Story</button><br>
-            </form>
+<p class="gold-paragraph">
+  Please ensure that your story is original and that you have the right to share it. We respect your privacy and
+  will handle your submission with care.
+</p>
+
+
+    <!-- Submit Story Form -->
+<section class="story-form">
+  <h2>Share Your Story</h2>
+  <p class="form-intro">
+    Your journey matters. By sharing your story of <strong>resilience, hope, or transformation</strong>,  
+    you can inspire others and help us build a community of healing and empowerment.
+  </p>
+
+  <form>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+    <label for="story">Your Story</label>
+    <textarea id="story" name="story" rows="8" placeholder="Write your story here..." required></textarea>
+
+    <button type="submit" class="btn-submit"> Submit Story</button>
+  </form>
+</section>
+
+  </section>
+
+  <hr>
+</body>
             <hr>
          <footer>
           <!--Footer Section-->
@@ -66,8 +211,7 @@
 
     <section>
       <ul>
-        <li><a href="#">Subscribe to Newsletter</a></li>
-      </ul>
+        <a href="#">Subscribe to Newsletter</a>
     </section>
 
     <p><small>© 2025 The Emily Rewritten Project. Affiliated with Christianity. All intellectual property rights 

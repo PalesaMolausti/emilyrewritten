@@ -51,6 +51,34 @@
         transform: translateY(0);
       }
     }
+    /* Emily Rewritten Project Section */
+.project-section {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #d4af37; /* gold line at top */
+  border-bottom: 2px solid #d4af37; /* gold line at bottom */
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Paragraph styling */
+.project-section p {
+  font-family: 'Merriweather', 'Georgia', serif; /* modern elegant font */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #222;
+  margin: 15px 0;
+}
+
+/* Bolded title text inside p */
+.project-section b {
+  font-size: 1.3rem;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
   </style>
 </head>
       <body>
@@ -74,13 +102,21 @@
                     <p style="text-align:center;">
                       <img src="C:\Users\IT\Downloads\Emilyrewritten\images\logo.png" width="200" height="200" alt="Emily Rewritten logo featuring stylized text Emily Rewritten in elegant script with a soft pastel background, conveying a hopeful and uplifting atmosphere">
                     
-                    <div style="text-align:center;">
-                      <p><b>The Emily Rewritten Project</b> is a faith-based non-profit organization dedicated to empowering individuals, Through storytelling, mentorship, 
-                      and safe spaces, we help young people reclaim their narratives and find strength in their journeys.</p>
-                 <p>Its roots—Latin aemulus meaning <em>“rival”</em> and Germanic amal meaning <em>“industrious”</em>—echo biblical themes of perseverance 
-                 and striving. These meanings reflect virtues such as diligence and faithfulness found throughout scripture. Spiritually, Emily can symbolize ambition, resilience, and the 
-                 grace to rise above challenges—qualities</p> 
-                 </div>
+                   <div class="project-section">
+  <!-- Symbolic image above -->
+  <img src="images/storytelling.jpg" alt="Storytelling Symbol" style="max-width:200px; margin-bottom:15px; border-radius:8px;">
+
+  <p><b>The Emily Rewritten Project</b> is a faith-based non-profit organization dedicated to empowering individuals. Through storytelling, mentorship, 
+  and safe spaces, we help young people reclaim their narratives and find strength in their journeys.</p>
+
+  <!-- Optional accent image between -->
+  <img src="images/quill.jpg" alt="Quill Symbol" style="max-width:100px; margin:20px auto; display:block;">
+
+  <p>Its roots—Latin <em>aemulus</em> meaning <em>“rival”</em> and Germanic <em>amal</em> meaning <em>“industrious”</em>—echo biblical themes of perseverance 
+  and striving. These meanings reflect virtues such as diligence and faithfulness found throughout scripture. Spiritually, Emily can symbolize ambition, resilience, and the 
+  grace to rise above challenges—qualities.</p>
+</div>
+
 
             <div class="container">
                 <div class="card">

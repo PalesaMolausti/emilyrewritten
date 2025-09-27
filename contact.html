@@ -1,7 +1,88 @@
 <!DOCTYPE html>
 <html>
   <title>Emily Rewritten | Get in Contact</title>
-  <link rel="stylesheet" href="css/mystyle.css">
+  <!--External CSS-->
+   <link rel="stylesheet" href="css/mystyle.css">
+
+  <!--Internal CSS-->
+    <style>
+      body {
+background: url("images/aboutbackground.png") no-repeat center/cover;
+
+      }
+      /* Contact Section */
+.contact {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.contact .overlay {
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: #d4af37; /* gold highlight */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-submit {
+  background: #d4af37;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #b8952d; /* darker gold */
+}
+      .background-blur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url("images/aboutbackground.png") no-repeat center/cover;
+        filter: blur(8px);
+        z-index: -1;
+      }
+      </style>
+
 </head>
     <body>
          <!--Navigation Bar-->
@@ -22,28 +103,39 @@
             <h1> Contact <span>Us</span></h1> 
             <p class="quote tagline" style="text-align:center;">“We would love to hear from you!”</p>
           </header>
-      
-      <address>
-        <p>Tel: +27 11 310 0125<br>
-        W: WhatsApp<br>
-        E: <a href="mailto:enquiries@emilyrewritten.co.za">enquiries@emilyrewritten.co.za</a></p>
-      </address>
-      <hr>
+      <!-- Contact Section -->
+<section class="contact" style="background-image: url('images/contact-bg.jpg');">
+  <div class="overlay">
+    
+    <!-- Contact Info -->
+    <address class="contact-info">
+      <p>
+        📞 Tel: <a href="tel:+27113100125">+27 11 310 0125</a><br>
+        💬 W: WhatsApp<br>
+        ✉️ E: <a href="mailto:enquiries@emilyrewritten.co.za">enquiries@emilyrewritten.co.za</a>
+      </p>
+    </address>
 
-      <form>
-        <label for="name">Your Name</label><br>
-        <input type="text" id="name" name="name" required><br>
+    <hr>
 
-        <label for="email">Your Email</label><br>
-        <input type="email" id="email" name="email" required><br>
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <label for="name">Your Name</label><br>
+      <input type="text" id="name" name="name" required><br>
 
-        <label for="message">Your Message</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
+      <label for="email">Your Email</label><br>
+      <input type="email" id="email" name="email" required><br>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+      <label for="message">Your Message</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br>
+
+      <button type="submit" class="btn-submit"> Send Message</button>
+    </form>
+
+  </div>
+</section>
 <hr>
+
   <footer>
     <!--Footer Section-->
     <section>

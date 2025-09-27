@@ -2,7 +2,127 @@
 <html> 
     <head> 
         <title>Emily Rewritten | Newsroom</title>
+        <!--External css-->
         <link rel="stylesheet" href="css/mystyle.css">
+      <style>
+
+    /* Events Section */
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      padding: 40px;
+    }
+
+    .event-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .event-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .event-content {
+      padding: 20px;
+    }
+
+    .event-content h5 {
+      margin: 10px 0;
+      color: #5C3A6B;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .event-date {
+      font-weight: bold;
+      color: goldenrod;
+    }
+
+    .event-content p {
+      color: #444;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+     .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: goldenrod;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #5C3A6B;
+    }
+
+    /* Past Events Carousel */
+    .carousel {
+      position: relative;
+      width: 90%;
+      margin: 60px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .carousel-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .carousel-btn {
+      background: rgba(92,58,107,0.8);
+      border: none;
+      color: white;
+      font-size: 22px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .carousel-btn:hover {
+      background: goldenrod;
+    }
+      </style>
     </head>
         <body>
             <!--Navigation Bar-->
@@ -24,29 +144,72 @@
             <p class="quote" style="text-align: center;">"Learn about our upcoming event dates."</p>
           </header>
 
-      <h3>Upcoming Events | 2025 and 2026</h3>
-      <ul>
-        <li>
-          <strong>27th October | Virtual Event</strong><br>
-            <h5>Emily Rewritten Huddle</h5>
-          <p>Ongoing online gatherings designed to recharge, rejuvenate, and reignite.</p>
-        </li>
-        <li>
-          <strong>3rd December | Virtual</strong><br>
-            <h5>It is yours, so you can rewrite it.</h5>
-          <p>Exploring courage and complexity in rewriting journeys.</p>
-        </li>
-        <li>
-          <strong>31st January | Live Event</strong><br>
-          <h5>Dwelling in the Unknown.</h5>
-          <p>The tricky, sticky, intriguing nature of the unknown has been there from the very beginning. That is 
-            why were offering an event where we can dive right into the heart of the matter.</p>
-        </li>
-      </ul>
-      <hr>
+       <!-- Upcoming Events -->
+  <h3 style="text-align:center; margin-top:30px;">Upcoming Events | 2025 and 2026</h3>
+  <section class="events-container">
+
+    <!-- Event Card 1 -->
+    <div class="event-card">
+      <img src="images/huddle.jpg" alt="Emily Rewritten Huddle" class="event-image">
+      <div class="event-content">
+        <p class="event-date">27 October 2025 | Virtual Event</p>
+        <h5>Emily Rewritten Huddle</h5>
+        <p>Ongoing online gatherings designed to recharge, rejuvenate, and reignite.</p>
+          <a href="booking.html" class="btn">For more information click here.</a>
+      </div>
+    </div>
+
+    <!-- Event Card 2 -->
+    <div class="event-card">
+      <img src="images/virtual.jpg" alt="Rewrite Journey Event" class="event-image">
+      <div class="event-content">
+        <p class="event-date">3 December 2025| Live Event</p>
+        <h5>It is yours, so you can rewrite it.</h5>
+        <p>Exploring courage and complexity in rewriting journeys.</p>
+         <a href="booking.html" class="btn">For more information click here.</a>
+      </div>
+    </div>
+
+    <!-- Event Card 3 -->
+    <div class="event-card">
+      <img src="images/live.jpg" alt="Dwelling in the Unknown" class="event-image">
+      <div class="event-content">
+        <p class="event-date">31 January 2026 | Live Event</p>
+        <h5>Dwelling in the Unknown</h5>
+        <p>Join us as we dive into the heart of the matter in this unforgetable event.</p>
+         <a href="booking.html" class="btn">For more information click here.</a>
+      </div>
+    </div>
+
+  </section>
+     <!-- Past Events Carousel -->
+  <h3 style="text-align:center; margin:40px 0;">Past Events Highlights</h3>
+  <div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide">
+        <img src="images/event.png" alt="Past Event 1">
+        <div class="carousel-caption">2024 Youth Storytelling Workshop</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/pastevent.jpg" alt="Past Event 2">
+        <div class="carousel-caption">Healing Through Words Retreat</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/blacktie.jpg" alt="Past Event 3">
+        <div class="carousel-caption">Faith & Resilience Gathering</div>
+      </div>
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-btn" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-btn" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <hr>
                        
-   <footer>
+   
   <!--Footer Section-->
+  <footer>
     <section>
       <h3>Join Our Community</h3>
       <p>
@@ -58,11 +221,23 @@
     </section>
 
     <section>
-      <ul>
-        <li><a href="#">Subscribe to Newsletter</a></li>
-      </ul>
+      <a href="#">Subscribe to Newsletter</a>
     </section>
 
     <p><small>© 2025 The Emily Rewritten Project. Affiliated with Christianity. All intellectual property rights reserved. No reproduction without permission.</small></p>
        </footer> 
+
+       <script>
+    // Simple Carousel Script
+    let currentIndex = 0;
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function moveSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = slides.length - 1;
+      if (currentIndex >= slides.length) currentIndex = 0;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
 </html>

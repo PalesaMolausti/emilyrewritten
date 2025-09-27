@@ -2,7 +2,55 @@
 <html> 
     <head> 
         <title>Emily Rewritten | Programs</title>
+        <!--External CSS-->
         <link rel="stylesheet" href="css/mystyle.css">
+        <!--Internal CSS-->
+        <style>
+          .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+          }
+.card {
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  color: #fff; /* makes text white */
+  box-shadow: 0 4px 8px rgba(223, 220, 220, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.card h3 {
+  color: #fff; /* white headings */
+}
+
+.card p {
+  color: #f1f1f1; /* softer white for body text */
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffdd57; /* gold accent link */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #ffffff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+        </style>
     </head>
         <body>
          <!--Navigation Bar-->
@@ -23,28 +71,58 @@
             <h1> Programs <span>& Services</span></h1> 
             <p class="quote" style="text-align: center;">"All about what we provide."</p>
        </header>
-      <ul>
-        <li>
-          <h3>Storytelling Workshops</h3>
-          <p>Helping youth reclaim their voice through guided writing and storytelling sessions.</p>
-        </li>
-        <li>
-          <h3>Counseling Sessions</h3>
-          <p>Providing safe, confidential spaces for healing and guidance.</p>
-        </li>
-            <li>
-          <h3> Youth-Led Initiatives</h3>
-          <p>Encouraging leadership and empowerment through self-directed projects.</p>
-            </li>
-            <li>
-          <h3> Public Speaking Platforms</h3>
-          <p>Equipping youth to share their stories with courage and impact.</p>
-           </li>
-      </ul>
-       <img src="C:\Users\IT\Downloads\Emilyrewritten\images\picture1.png" width="500" height="300">
-      <hr>
+
+     <!-- Programs & Initiatives Section -->
+<section class="programs">
+  <h2 class="section-title">🌟 Our Programs & Initiatives</h2>
+  <p class="section-subtitle">We empower youth by providing platforms, tools, and opportunities that nurture confidence, resilience, and growth.</p>
+
+  <div class="card-container">
+    <div class="card" style="background-image: url('images/storytelling.jpg');">
+      <h3> Storytelling Workshops</h3>
+      <p>Helping youth reclaim their voice through guided <strong>writing, creativity, and storytelling sessions</strong>. Each workshop builds confidence and encourages self-expression.</p>
+      <a href="#" class="card-link">Learn More →</a>
+    </div>
+
+    <div class="card" style="background-image: url('images/counselling.jpg');">
+      <h3> Counseling Sessions</h3>
+      <p>Providing safe, <strong>confidential spaces</strong> for healing, personal growth, and professional guidance with trained counselors.</p>
+      <a href="#" class="card-link">Book a Session →</a>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card" style="background-image: url('images/public.jpg');">
+      <h3>🎤 Public Speaking Platforms</h3>
+      <p>Equipping youth to share their stories with <strong>courage, clarity, and impact</strong>. Opportunities to speak at community events and conferences.</p>
+      <a href="#" class="card-link">Get Involved →</a>
+    </div>
+
+    <div class="card" style="background-image: url('images/career.jpg');">
+      <h3> Career Mapping</h3>
+      <p>Helping youth design their career paths based on their <strong>strengths, passions, and emerging industries</strong>. Includes mentorship and work readiness training.</p>
+      <a href="#" class="card-link">Start Your Journey →</a>
+    </div>
+
+    <div class="card" style="background-image: url('images/skills.jpg');">
+      <h3> Skills Programs</h3>
+      <p>Equipping youth with <strong>in-demand skills</strong> for the digital economy. Includes practical training, certifications, and work opportunities.</p>
+      <a href="#" class="card-link">View Skills →</a>
+    </div>
+
+    <div class="card" style="background-image: url('images/community.jpg');">
+      <h3> Community Outreach</h3>
+      <p>Reaching communities through <strong>donations, volunteering, and impactful initiatives</strong>. Building bridges between youth and society.</p>
+      <a href="#" class="card-link">Join the Movement →</a>
+    </div>
+
+    <div class="card" data-aos="fade-up" style="background-image: url('images/seat.jpg');">
+      <h3> Seat At The Table</h3>
+      <p>Preparing youth to confidently occupy spaces of influence, <strong>leading conversations and shaping decisions</strong> that matter to their communities.</p>
+      <a href="#" class="card-link">Take Your Seat →</a>
+    </div>
+  </div>
         
- 
   <!--Footer Section-->
   <footer>
     <section>
