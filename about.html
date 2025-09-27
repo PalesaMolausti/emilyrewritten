@@ -1,42 +1,246 @@
 <!DOCTYPE html>
 <html> 
-    <head> 
+    <head>
+      
+    <!--External CSS (Global Styles)-->
       <link rel="stylesheet" href="css/mystyle.css">
         <title>Emily Rewritten | About Us</title>
+        <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <!-- Internal CSS (page-specific) -->
+  <style>
+    .cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card h4 {
+  border-left: 4px solid goldenrod;
+  padding-left: 10px;
+}
+ .card h4 {
+      border-left: 4px solid goldenrod;
+      padding-left: 10px;
+    }
+    .founder-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.founder-image {
+  width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.founder-card {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.card-heading {
+  border: 1px solid goldenrod;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Responsive tweak for mobile */
+@media (max-width: 768px) {
+  .founder-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .founder-image {
+    width: 80%;
+  }
+
+  .founder-card {
+    width: 90%;
+  }
+  .founder-summary {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  color: #444;
+  max-width: 220px;
+}
+
+}
+
+
+    /* Impact Section */
+    .impact {
+      background: url("images/africawomen.jpg") no-repeat center/cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #f6f4f4; /* makes text readable */
+    }
+
+    .impact h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+    }
+
+    .impact-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .impact-stats div {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 200px;
+    }
+
+    .impact-stats .counter {
+      font-size: 2rem;
+      color: goldenrod;
+      font-weight: bold;
+      display: block;
+    }
+    .impact-stats p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: goldenrod;
+    }
+</style>
     </head>
+
         <body>
             <!--Navigation Bar-->
-        <nav>
-           <img src="C:\Users\IT\Downloads\Emilyrewritten\images\logo.png" width="200" height="200" alt="Emily Rewritten Logo">
-           <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="newsroom.html">Events</a>
-            <a href="programs.html">Programs</a>
-            <a href="stories.html">stories</a>
-            <a href="contact.html">Contact Us</a>
-           </div>
-        </nav>
+        <nav class="navbar">
+  <div class="nav-left">
+    <img src="images/logo.png" alt="Emily Rewritten Logo" class="logo">
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About Us</a>
+    <a href="newsroom.html">Events</a>
+    <a href="programs.html">Programs</a>
+    <a href="stories.html">Stories</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
             
-            <h2><b>Who is Emily Rewritten</b></h2> 
-             <p>Emily is a symbolic figure representing every young woman who has faced trauma but found strength 
-              to rewrite her story. The name comes from the founder first published book “Emily rewritten”, 
-              which sparked the movement. It is about resilience, healing, and authorship.</p>
-                   
-                 <img src="C:\Users\IT\Downloads\Emilyrewritten\images\women.jpg" width="400">
-                   
-            <h4><b>Mission</b></h4>
-                  <p>Empowering youth to heal, reclaim their stories, and find strength through storytelling, 
-                    mentorship, and safe spaces.</p>
-            <h4><b>Vision</b></h4>
-                  <p>Our vision is to empower youth to be equipped to lead with purpose as the author and architect 
-                    of their own life.</p>
-            <h4><b>Founder's Message</b></h4>
-                  <p>Emily rewritten began with one story - my own. Today, it belongs to thousands of voices 
-                    reclaiming their power. We exist so every young person can rise beyond with courage and authorship.</p>
+        <!--The Hero Section-->
+          <header class="hero">
+            <h1> Who is <span>Emily Rewritten?</span></h1> 
+            <p class="quote tagline" style="text-align:center;">“A movement of resilience, healing, and authorship.”</p>
+          </header>
+
+          <!--About Content-->
+            <main class="container">
+              <section class="about intro">
+  <div style="display: flex; justify-content: center; gap: 16px;">
+    <img src="images/women3.jpg" width="400" alt="Founder Image" style="display: block;">
+    <img src="images/women5.jpg" width="400" alt="Founder Image" style="display: block;">
+  </div>
+
+                  <p>
+                    Emily is a symbolic figure representing every young woman who has faced trauma but found strength 
+              to rewrite her story. The name comes from the founder first published book <em>Emily rewritten</em>, 
+              which sparked the movement. It is about resilience, healing, and authorship.
+                  </p>
+              </section>
+   
+            <!--Mission, Vision, Founder's Message Cards-->
+              <section class="cards">
+  <div class="card">
+    <h2>Core</h2>
+    <h4 class="card-heading"><b>Mission</b></h4>
+    <p class="card-text">
+      Empowering youth to reclaim their narratives and discover their inner strength through storytelling, 
+      career mentorship, and everyday in-demand skills. Through meaningful mentorship connections, they gain 
+      wisdom, inspiration, and tools to navigate life’s challenges. We ignite a sense of belonging, helping them 
+      take charge of their stories with purpose.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Valued</h2>
+    <h4 class="card-heading"><b>Vision</b></h4>
+    <p class="card-text">
+      Inspiring youth to become purpose-driven leaders, equipped with the tools, knowledge, and resilience to
+      take charge of their future. We guide them in shaping unique paths, making meaningful decisions, and leaving 
+      a positive impact. By fostering growth and self-awareness, we envision a generation prepared to lead with 
+      courage, creativity, and responsibility.
+    </p>
+  </div>
+
+  <div class="founder-wrapper">
+  <img src="images/founder.jpg" alt="Founder Image" class="founder-image">
+  <p class="founder-summary">
+  <strong>Melissa Yvonne Skhosule </strong> founded EmilyRewritten.org on January 31, 2020, in South Africa, as a youth-centered 
+  organisation empowering young people to reclaim their stories. With over 4,000
+   youth impacted across Africa through socail media platforms, virtual events and mentorship sessions, it creates safe spaces for growth, and leadership through 
+   career advice, intensive support and creative expression. The organisation offers storytelling workshops, 
+   , advocacy campaigns, and youth-led initiatives that help young people stand strong and lead with purpose.
+</p>
+
+
+  <div class="card founder-card">
+    <h2>Founder</h2>
+    <h4 class="card-heading"><b>Melissa's Message</b></h4>
+    <p class="card-text">
+      Emily Rewritten began with one story—my own. Today, it belongs to thousands of voices reclaiming their 
+      power. We exist so every young person can rise beyond with courage and authorship.
+    </p>
+  </div>
+  </div>
+</section>
+
+          </section>
+
+          <!--Impact Section-->
+          <section class="impact">
+           <h2>Our Impact</h2>
+           <div class="impact-stats">
+             <div><span class="counter" data-target="4131">0</span><p>Youth Empowered</p></div>
+             <div><span class="counter" data-target="12">0</span><p>Programs Launched</p></div>
+             <div><span class="counter" data-target="1783">0</span><p>Stories Shared</p></div>
+            </div>
+          </section>
+        </main>
 <hr>
-    <footer>
+  
       <!--Footer Section-->
+  <footer>
     <section>
       <h3>Join Our Community</h3>
       <p>
@@ -48,13 +252,33 @@
     </section>
 
     <section>
-      <ul>
-        <li><a href="#">Subscribe to Newsletter</a></li>
-      </ul>
+      
+        <a href="#">Subscribe to Newsletter</a>
+      
     </section>
 
     <p><small>© 2025 The Emily Rewritten Project. Affiliated with Christianity. All intellectual property rights 
       reserved. No reproduction without permission.</small></p>
+  </footer>      
+              <hr>
+        <!-- Counter Script -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const c = +counter.innerText;
+        const increment = target / 100;
+        if(c < target) {
+          counter.innerText = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter();
+    });
+  </script>
         </body>
-</html>
 </html>
