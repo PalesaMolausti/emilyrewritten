@@ -2,37 +2,115 @@
 <html> 
     <head> 
         <title>Emily Rewritten | Home</title>
+         <!-- External CSS (global styles) -->
         <link rel="stylesheet" href="css/mystyle.css">
-    </head>
-        <body>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Internal CSS (page-specific) -->
+  <style>
+    /* Container for cards */
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Card styles unique to this page */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      width: 48%;
+      min-width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    /* Card paragraph font */
+    .card p,
+    .card li {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+    }
+
+    /* Different animation delays */
+    .card:nth-child(1) { animation-delay: 0.3s; }
+    .card:nth-child(2) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+      <body>
           <!--Navigation Bar-->
+        <nav>
+           <img src="C:\Users\IT\Downloads\Emilyrewritten\images\logo.png" width="200" height="200" alt="Emily Rewritten Logo">
+           <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="newsroom.html">Events</a>
             <a href="programs.html">Programs</a>
             <a href="stories.html">stories</a>
             <a href="contact.html">Contact Us</a>
+           </div>
+        </nav>
 
-            <h1><b>This is Emily Rewritten</b></h1> 
+            <h1><b>Emily Rewritten</b></h1> 
+            <p class="quote">"Designed with love & courage"</p>
                     <centre>
                  <img src="C:\Users\IT\Downloads\Emilyrewritten\images\logo.png" width="200" height="200">
                     </centre>
 
-             <h3> Rewrite your story, Reclaim your power.</h3>
-              <p><h4> Stories have the power to transform.</h4>
-                 Emily Rewritten project is about love, Faith, and Forgiveness, by providing opportunities and 
-                 resources for youth to heal, adapt and lead with purpose.</p>
-              <p>
-                <hr>
-                <b>Become a Supporter</b>
-              </p>
-               <p>The Emily rewritten project is here today thanks to all our incredible supporters who believe in 
-                the transformative power of real-life stories. Become a supporter today to help provide a vital 
-                lifeline for our long-term stability and growth.</p>
-             <button type= "button">Join Us</button>
-                <button type="button">Donate</button>
-                <button type="button">Share your Story</button>
+            <div class="container">
+                <div class="card">
+                  <h2>About the Journey</h2>
+
+                <ul>
+                 <li><b>Rewrite your story, Reclaim your power.</b>Emily Rewritten is more than a story - it's a movement of love, Faith, and transformation. Through every chapter, we 
+                 embrace the power of rewritting life's narrative with grace and hope, By providing opportunities and resources for youth 
+                 to heal, adapt and lead with purpose. Committed to empowering and transforming lives through storytelling, support, and 
+                 community.</li>
+                 <li><b>Stories have the power to transform.</b> By connecting with mentors, sharing experiences, and participating in our 
+                  initiatives, members of our community find hope and strength to rewrite their own stories.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+              <h2>Our Core Values</h2>
+              <ul>
+                <li><b>Empowerment:</b> Believing in the inherent strength and potential of every individual.</li>
+                <li><b>Community:</b> Building a supportive and inclusive community where individuals can connect, share their stories, and find encouragement.</li>
+                <li><b>Resilience:</b> Promoting resilience by providing resources and opportunities for personal growth, healing, and transformation.</li>
+                <li><b>Faith:</b> Embracing faith as a source of hope, guidance, and strength in the journey of rewriting one's story.</li>
+                <li><b>Authenticity:</b> Encouraging individuals to be true to themselves and embrace their unique stories and experiences.</li>
+              </ul>
+              </div>
+            </div>
+
+            <hr>
+            <div style="text-align:center;">
+            <b>Become a Supporter</b>
+            <p>
+              The Emily Rewritten Project thrives thanks to our incredible supporters who believe in the transformative power of real-life stories. Your involvement helps us provide vital resources, mentorship, and opportunities for long-term stability and growth.
+            </p>
+            <button type="button">Join Us</button>
+            <button type="button">Donate</button>
+            <button type="button">Share your Story</button>
+            </div>
         <hr>
+
   <footer>
     <!--Footer Section-->
     <section>
