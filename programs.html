@@ -169,4 +169,46 @@
     <p><small>© 2025 The Emily Rewritten Project. Affiliated with Christianity. All intellectual property rights reserved. No reproduction without permission.</small></p>
        </footer> 
     </body>
+
+    <script>
+    // ------------------------------------------------------------------
+    // 1. MOBILE MENU TOGGLE FUNCTIONALITY 
+    // ------------------------------------------------------------------
+
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        // Toggles the 'open' class on the navigation links container
+        navLinks.classList.toggle('open');
+    }
+
+    // ------------------------------------------------------------------
+    // 2. CARD HOVER EFFECT (Dynamic Title Color Change)
+    // ------------------------------------------------------------------
+    
+    // Executes once the entire page structure is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const title = card.querySelector('h3');
+            if (!title) return; 
+
+            // Event Listener for Mouse Enter and Focus (for keyboard navigation)
+            card.addEventListener('mouseenter', () => {
+                title.style.color = '#ffdd57'; // Change color on hover
+            });
+            card.addEventListener('focus', () => {
+                title.style.color = '#ffdd57'; // Change color on focus
+            });
+
+            // Event Listener for Mouse Leave and Blur
+            card.addEventListener('mouseleave', () => {
+                title.style.color = '#fff'; // Revert color
+            });
+            card.addEventListener('blur', () => {
+                title.style.color = '#fff'; // Revert color
+            });
+        });
+    });
+</script>
 </html>
