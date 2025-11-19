@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
   <title>Emily Rewritten | Get in Contact</title>
   <!--External CSS-->
    <link rel="stylesheet" href="css/mystyle.css">
@@ -81,6 +82,34 @@ background: url("images/aboutbackground.png") no-repeat center/cover;
         filter: blur(8px);
         z-index: -1;
       }
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+  }
+}
       </style>
 
 </head>
@@ -118,8 +147,7 @@ background: url("images/aboutbackground.png") no-repeat center/cover;
 
     <hr>
 
-    <!-- Contact Form -->
-    <form class="contact-form">
+    <form id="contactForm" class="contact-form">
       <label for="name">Your Name</label><br>
       <input type="text" id="name" name="name" required><br>
 
@@ -128,8 +156,8 @@ background: url("images/aboutbackground.png") no-repeat center/cover;
 
       <label for="message">Your Message</label><br>
       <textarea id="message" name="message" rows="5" required></textarea><br>
-
       <button type="submit" class="btn-submit"> Send Message</button>
+    </form>
     </form>
 
   </div>
@@ -154,9 +182,18 @@ background: url("images/aboutbackground.png") no-repeat center/cover;
     
     </section>
 
-    <p><small>© 2025 The Emily Rewritten Project. Affiliated with Christianity. All intellectual property rights 
-      reserved. No reproduction without permission.</small></p>
+    <p><small>© 2025 The Emily Rewritten Project. Affiliated with Christianity. All intellectual property rights</small></p>
  </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  const email = document.getElementById("email").value;
+  if (!email.includes("@")) {
+    e.preventDefault();
+    alert("Please enter a valid email address.");
+  }
+});
+</script>
 
     </body>
 </html>

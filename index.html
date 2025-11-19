@@ -79,6 +79,34 @@
   font-family: 'Playfair Display', serif;
 }
 
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+  }
+}
+
   </style>
 </head>
       <body>
@@ -177,5 +205,73 @@
     <p><small>© 2025 The Emily Rewritten Project. Affiliated with Christianity. All intellectual property rights reserved. No reproduction without permission.</small></p>
   </footer>      
               <hr>
+
+<hr>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("JavaScript successfully loaded.");
+
+    /* -----------------------------------------
+       1. SMOOTH SCROLL FOR ACTION BUTTONS 
+    ------------------------------------------*/
+    const actionButtons = document.querySelectorAll(".action-btn");
+    if (actionButtons.length > 0) {
+        actionButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+            });
+        });
+    }
+
+    /* -----------------------------------------
+       2. CARD HOVER EFFECT (SAFE VERSION)
+    ------------------------------------------*/
+    const cards = document.querySelectorAll(".card");
+    if (cards.length > 0) {
+        cards.forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                card.style.transform = "scale(1.02)";
+                card.style.boxShadow = "0 10px 20px rgba(0,0,0,0.15)";
+                card.style.transition = "all 0.3s";
+            });
+
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "scale(1)";
+                card.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+            });
+        });
+    }
+
+    /* -----------------------------------------
+       3. MOBILE NAV TOGGLE & SCROLL-TO-TOP
+    ------------------------------------------*/
+    // Mobile Navigation Toggle Logic
+    const toggleButton = document.querySelector('.nav-toggle-button'); // optional button for mobile menu
+    const navLinks = document.querySelector('.nav-links');
+
+    if (toggleButton && navLinks) {
+        toggleButton.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    }
+
+    // Scroll-to-Top Button Logic
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    if (scrollBtn) {
+        window.addEventListener("scroll", () => {
+            scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+});
+</script>
+
         </body>
+
 </html>

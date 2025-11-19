@@ -49,6 +49,33 @@
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+  }
+}
 
         </style>
     </head>

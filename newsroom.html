@@ -122,6 +122,34 @@
     .carousel-btn:hover {
       background: goldenrod;
     }
+  
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+  }
+}
       </style>
     </head>
         <body>
@@ -228,16 +256,34 @@
        </footer> 
 
        <script>
-    // Simple Carousel Script
-    let currentIndex = 0;
-    const track = document.getElementById('carouselTrack');
-    const slides = document.querySelectorAll('.carousel-slide');
-
-    function moveSlide(direction) {
-      currentIndex += direction;
-      if (currentIndex < 0) currentIndex = slides.length - 1;
-      if (currentIndex >= slides.length) currentIndex = 0;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // ------------------------------------------------------------------
+    // 1. MOBILE MENU TOGGLE FUNCTIONALITY
+    // ------------------------------------------------------------------
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        // The classList.toggle method adds the class 'open' if it doesn't exist, and removes it if it does.
+        navLinks.classList.toggle('open');
     }
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Simple Carousel Script
+        let currentIndex = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+
+        // Note: The function 'moveSlide' must be global because it's called
+        // directly from the HTML button's 'onclick' attribute.
+        window.moveSlide = function(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+            if (currentIndex >= slides.length) currentIndex = 0;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        
+        // Optional: Auto-advance the carousel every 5 seconds
+        setInterval(() => {
+             window.moveSlide(1);
+        }, 5000);
+
+    });
   </script>
 </html>
