@@ -174,7 +174,29 @@
 
             <hr>
             <div style="text-align:center;">
-            <b>Become a Supporter</b>
+            <button id="support-btn" onclick="toggleSupportText()"><b>Become a Supporter</b></button>
+<p id="change"></p>
+
+<script>
+    function toggleSupportText() {
+        const outputElement = document.getElementById('change');
+        const buttonElement = document.getElementById('support-btn');
+        
+        // Define the content once
+        const message = 'This is not just another movement with unfulfilled promises — it is a commitment to hope, inclusivity, and meaningful action. It is a space that uplifts all our communities, not only the privileged, but every person who deserves to be seen, heard, and supported. As we move forward, we hold firmly to our promise: no one will be left behind.';
+        
+        // Check if the output area is empty (if text is hidden)
+        if (outputElement.innerHTML === '') {
+            // OPEN state
+            outputElement.innerHTML = message;
+            buttonElement.innerHTML = '<b>Hide Details</b>'; 
+        } else {
+            // CLOSE state
+            outputElement.innerHTML = '';
+            buttonElement.innerHTML = '<b>Become a Supporter</b>';
+        }
+    }
+</script>
             <p style="max-width:600px; margin:0 auto; font-style: italic;">
               The Emily Rewritten Project thrives thanks to our incredible supporters who believe in the transformative power of real-life stories. Your involvement helps us provide vital resources, mentorship, and opportunities for long-term stability and growth.
             </p>
