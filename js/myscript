@@ -1,0 +1,17 @@
+
+function dynamic() {
+    const outputElement = document.getElementById('change');
+    
+    // Toggle a CSS class (recommended for styling changes)
+    outputElement.classList.toggle('highlight'); 
+
+    // Change an inline style property
+    outputElement.style.color = 'goldenrod'; 
+    
+    // Update content
+    if (outputElement.textContent === 'Hello!') {
+        outputElement.textContent = 'Goodbye!';
+    } else {
+        outputElement.textContent = 'Hello!';
+    }
+}
